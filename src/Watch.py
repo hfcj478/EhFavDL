@@ -36,7 +36,7 @@ class Watch(Config):
         dl_list = []
         failed_gid_list = ""
         if fav_cat != "":
-            dl_list = get_web_gallery_download_list(fav_cat=self.watch_fav_ids)
+            dl_list = get_web_gallery_download_list(fav_cat=fav_cat)
         if gids != "":
             dl_list = get_web_gallery_download_list(gids=gids)
         if not dl_list:

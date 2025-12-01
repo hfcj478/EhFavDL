@@ -591,6 +591,7 @@ class AddFavData(Config):
                 AND eh.gid != eh.current_gid
                 AND eh.current_gid IN ( SELECT gid FROM eh_data )
                 AND eh.current_gid IN ( SELECT gid FROM fav_category WHERE del_flag = 0 AND original_flag = 0 AND web_1280x_flag = 0 )
+                AND eh.copyright_flag = 0
             ''').fetchall()
             if len(update_list) > 0:
                 logger.warning(f"下列画廊存在新版本可用/The current gallery has a new version available.: ")
